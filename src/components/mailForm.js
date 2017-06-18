@@ -55,7 +55,7 @@ handleBtnSendClick(){
             Content: this.state.Content
         })
     })  
-    .then(response => response)
+    .then(response => { this.setState({errorMsg: "Instruction processed without error"})} )
     .catch(error => { this.setState({errorMsg: "There appears to be a problem. Please refresh the page and try again later."}) 
     } )
  }
